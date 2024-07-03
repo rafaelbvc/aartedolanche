@@ -1,6 +1,6 @@
 Em fase inicial de construção...
 
-todo/ reescrever a readme
+<!-- todo/ reescrever a readme
 
 //// rascunho ////
 
@@ -33,4 +33,4 @@ Backlog:
 
 ////////////////////////////////////////
 
-Backend
+Backend -->
