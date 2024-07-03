@@ -29,9 +29,9 @@ export default {
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list -->
 
-em construção...
+em construção... fase inicial
 
-todo/ reescrever a readme
+<!-- todo/ reescrever a readme
 
 //// rascunho ////
 
@@ -64,4 +64,4 @@ Criar componente Helmet[x]
 
 ////////////////////////////////////////
 
-Backend
+Backend -->

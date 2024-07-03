@@ -2,7 +2,7 @@ em construção...
 
 Frontend
 
-todo/ reescrever a readme
+<!-- todo/ reescrever a readme
 
 //// rascunho ////
 
@@ -35,4 +35,4 @@ Criar componente Helmet[x]
 
 ////////////////////////////////////////
 
-Backend
+Backend -->
