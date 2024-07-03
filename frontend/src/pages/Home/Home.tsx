@@ -1,0 +1,15 @@
+import HelmetComponent from '../../components/HelmetComponent';
+
+const Home = () => {
+  return (
+    <div>
+      <HelmetComponent
+        titleHeader="A Arte do Lanche - Home"
+        contentKeywords="lanche, lanches, cachorro quente, lancheria, lanchonete, hamburgueria, itapetininga, hamburguer, aberto 24 horas"
+        contentDescriptionA="página home lancheria A Arte do Lanche, Itapetininga"
+      />
+    </div>
+  );
+};
+
+export default Home;
