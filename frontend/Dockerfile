@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:21.7.1
 
 LABEL maintainer="aartedolanche_frontend"
 
@@ -16,6 +16,6 @@ RUN npm install
 
 COPY --chown=node:node . .
 
-EXPOSE 5173
+EXPOSE 4050
 
-CMD [ "node" , "main.tsx" ]
+CMD [ "npm" , "run", "dev" ]

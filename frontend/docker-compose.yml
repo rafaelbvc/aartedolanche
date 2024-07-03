@@ -10,9 +10,9 @@ services:
       - REACT_ENV=development
     # production environment
     # - REACT_ENV=production
-    image: aartedolanche
-    restart: always
+    # image: aartedolanche
+    # restart: always
     expose:
-      - 5173
+      - '4050'
     ports:
-      - '5173:5173'
+      - '4050:4050'
