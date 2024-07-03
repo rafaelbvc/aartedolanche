@@ -1,4 +1,4 @@
-export type helmetT = {
+export type tHelmet = {
   titleHeader: String;
   contentKeywords: string;
   contentDescriptionA: string;
