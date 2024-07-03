@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { helmetT } from '../types/HelmeT';
+import { useEffect } from 'react';
 
 const HelmetComponent = (props: helmetT) => {
   const {
@@ -8,6 +9,13 @@ const HelmetComponent = (props: helmetT) => {
     contentDescriptionA,
     contentDescriptionB,
   } = props;
+
+  useEffect(() => {}, [
+    titleHeader,
+    contentKeywords,
+    contentDescriptionA,
+    contentDescriptionB,
+  ]);
 
   return (
     <Helmet>
