@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet';
-import { helmetT } from '../types/HelmeT';
+import { tHelmet } from '../types/THelmet';
 import { useEffect } from 'react';
 
-const HelmetComponent = (props: helmetT) => {
+const HelmetComponent = (props: tHelmet) => {
   const {
     titleHeader,
     contentKeywords,
