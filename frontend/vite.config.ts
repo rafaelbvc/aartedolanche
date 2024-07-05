@@ -7,7 +7,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 4050, // definir a porta para 8080
+    port: 4050, // definir a porta para 4050
   },
   test: {
     globals: true,

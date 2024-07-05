@@ -2,16 +2,13 @@ version: '3'
 services:
   aartedolanche_frontend:
     build: .
-    command: 'npm run dev'
+    command: 'npm run build'
     # production environment
     # command: npm run build
     working_dir: /aartedolanche/frontend
-    environment:
-      - REACT_ENV=development
+    # environment:
     # production environment
     # - REACT_ENV=production
-    # image: aartedolanche
-    # restart: always
     expose:
       - '4050'
     ports:
