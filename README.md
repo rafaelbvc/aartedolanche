@@ -20,9 +20,11 @@ Backlog:
 #Docker/Compose[x]
 #Estruturar a arquitetura de pastas[x]
 #Configurar a VPS[x]
-#Criar(vazio) os componentes de Home[x] / Cardápio[] / Contato[] ----- etc === a preencher[ ]
+#Criar componente HelmetComponent[x]
+#Criar(vazio) as pages Home[x] / Cardápio[] / Contato[] ----- etc === a preencher[ ]
+#Criar(vazio) os componentes de NavBar[x] / Footer[x] ---------- etc ===== a preencher[]
 #Criar rotas (router)[x]
-#Criar componente Helmet[x]
+#Trocar o favicon.ico[x]
 
 -
 -
