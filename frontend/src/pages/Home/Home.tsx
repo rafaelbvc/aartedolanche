@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       <HelmetComponent
-        titleHeader="A Arte do Lanche - Home"
+        titleHeader="Home - A Arte do Lanche"
         contentKeywords="lanche, lanches, cachorro quente, lancheria, lanchonete, hamburgueria, itapetininga, hamburguer, aberto 24 horas"
         contentDescriptionA="página home lancheria A Arte do Lanche, Itapetininga"
       />

@@ -5,7 +5,7 @@ const Contato = () => {
   return (
     <div>
       <HelmetComponent
-        titleHeader="A Arte do Lanche - Contato"
+        titleHeader="Contato - A Arte do Lanche"
         contentKeywords="contact, contato"
         contentDescriptionA="contato aartedolanche"
       />

@@ -1,15 +1,10 @@
-import HelmetComponent from "../HelmetComponent";
-import "./Footer.module.css"
+import "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div>
-      <HelmetComponent
-        contentKeywords="footer, rodapé"
-        contentDescriptionA="rodapé global aartedolanche"
-      />
+    <footer>
       <h2>Footer</h2>
-    </div>
+    </footer>
   );
 };
 

@@ -5,7 +5,7 @@ const Cardapio = () => {
   return (
     <div>
       <HelmetComponent
-        titleHeader="A Arte do Lanche - Cardápio"
+        titleHeader="Cardápio - A Arte do Lanche"
         contentKeywords="Cardápio"
         contentDescriptionA="cardápio aartedolanche"
       />
