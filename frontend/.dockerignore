@@ -1,4 +1,7 @@
 node_modules
-Dockerfile
-docker-compose.yml
+npm-debug.log
+build
 .dockerignore
+**/.git
+**/.DS_Store
+**/node_modules

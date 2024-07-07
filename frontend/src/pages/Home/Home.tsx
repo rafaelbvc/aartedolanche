@@ -1,4 +1,4 @@
-import HelmetComponent from '../../components/HelmetComponent';
+import HelmetComponent from "../../components/HelmetComponent";
 
 const Home = () => {
   return (
@@ -10,7 +10,6 @@ const Home = () => {
       />
       <h1>A Arte do Lanche</h1>
       <h3>...em fase inicial de construção...</h3>
-      <h2></h2>
     </div>
   );
 };
