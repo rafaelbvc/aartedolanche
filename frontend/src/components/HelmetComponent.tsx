@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import { tHelmet } from '../types/THelmet';
+import { tHelmet } from '../types/tHelmet';
 import { useEffect } from 'react';
 
 const HelmetComponent = (props: tHelmet) => {

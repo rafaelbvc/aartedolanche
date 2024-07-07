@@ -1,5 +1,5 @@
 export type tHelmet = {
-  titleHeader: String;
+  titleHeader?: String;
   contentKeywords: string;
   contentDescriptionA: string;
   contentDescriptionB?: string;
