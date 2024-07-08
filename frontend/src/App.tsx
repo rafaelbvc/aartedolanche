@@ -1,14 +1,14 @@
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import PublicRoutes from "./routes/Public/PublicRoutes";
-import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-        <NavBar />
+        <Header />
         <PublicRoutes />
         <Footer />
       </BrowserRouter>
