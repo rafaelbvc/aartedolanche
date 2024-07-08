@@ -1,9 +1,10 @@
-import "./NavBar.modules.css";
+import MenuNav from "../MenuNav/MenuNav";
+import styles from "./NavBar.module.css";
 
 const NavBar = () => {
   return (
-    <nav>
-      <h2>NavBar</h2>
+    <nav className={styles.navBar}>
+      <MenuNav />
     </nav>
   );
 };
