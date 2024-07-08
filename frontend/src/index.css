@@ -20,6 +20,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
+  background-color: rgb(7, 7, 7);
 }
 
 header {
@@ -28,11 +29,18 @@ header {
   flex-flow: column nowrap;
   top: 0;
   z-index: 1;
-  height: 30vh;
+  height: 32vh;
+  background-color: rgb(190, 57, 24);
 }
 
 footer {
   bottom: 0;
+  height: 8vh;
+  background-color: rgb(190, 57, 24);
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {
