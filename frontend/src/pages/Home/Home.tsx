@@ -1,8 +1,9 @@
+import styles from "./Home.module.css";
 import HelmetComponent from "../../components/HelmetComponent";
 
 const Home = () => {
   return (
-    <div>
+    <div className={styles.home}>
       <HelmetComponent
         titleHeader="Home - A Arte do Lanche"
         contentKeywords="lanche, lanches, cachorro quente, lancheria, lanchonete, hamburgueria, itapetininga, hamburguer, aberto 24 horas"

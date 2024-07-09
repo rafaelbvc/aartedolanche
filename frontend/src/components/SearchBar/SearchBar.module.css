@@ -5,3 +5,18 @@
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+
+.searchInput {
+  width: 100%;
+  padding: 0 2px;
+  border-radius: 0.14rem;
+}
+
+.searchBTN {
+  float: right;
+}
+
+p {
+  font-size: 0.7rem;
+  font-weight: bolder;
+}

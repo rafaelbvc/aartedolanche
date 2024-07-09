@@ -21,10 +21,18 @@ Backlog:
 #Estruturar a arquitetura de pastas[x]
 #Configurar a VPS[x]
 #Criar componente HelmetComponent[x]
-#Criar(vazio) as pages Home[x] / Cardápio[] / Contato[] ----- etc === a preencher[ ]
+#Criar(vazio) as pages Home[x] / Cardápio[x] / Contato[x] ----- etc === a preencher[ ]
 #Criar(vazio) os componentes de NavBar[x] / Footer[x] ---------- etc ===== a preencher[]
 #Criar rotas (router)[x]
 #Trocar o favicon.ico[x]
+#Criar index de exportação dos svgs[]
+#Criar componente de svg[]
+#Criar JSON Mock dos itens da ArteDoLanche[]
+#Criar container dos cards[]
+#Criar componente card[]
+#Criar responsividade breakpoint[screen && media  min360px][]
+
+
 
 -
 -
