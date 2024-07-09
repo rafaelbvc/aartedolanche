@@ -1,6 +1,5 @@
 export type tSvgComponent = {
-  svgImage: {};
+  imgAlt: string;
+  svgImage: string;
   svgWidth: string;
-  svgColorFill?: string;
-  svgColorStroke?: string;
 };

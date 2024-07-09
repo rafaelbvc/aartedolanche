@@ -1,13 +1,11 @@
-import { ReactSVG } from "react";
 import { tSvgComponent } from "../types/tSvgComponent";
 
 const SvgComponent = (props: tSvgComponent) => {
-  const { svgWidth, svgColorFill, svgImage, svgColorStroke } = props;
+  const { svgWidth, svgImage, imgAlt } = props;
 
   return (
     <>
-      {svgImage}
-
+      <img src={svgImage} alt={imgAlt} style={{ width: svgWidth }} />
     </>
   );
 };

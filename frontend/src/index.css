@@ -8,9 +8,14 @@
   border: none;
 }
 
-/* :root {
-
-} */
+:root {
+  --HEADER-FOOTER-BGCOLOR-A: rgba(190, 57, 24, 0.3);
+  /* --HEADER-FOOTER-BGCOLOR-B: #000; */
+  --BODY-BGCOLOR-A: rgba(7, 7, 7, 0.9);
+  /* --BODY-BGCOLOR-B: whitesmoke; */
+  --DEATILS-COLOR-A: rgba(119, 218, 21);
+  /* --DEATILS-COLOR-B: rgba(119, 218, 21) */
+}
 
 html {
   font-family: "Nunito", sans-serif;
@@ -37,7 +42,11 @@ header {
   top: 0;
   z-index: 1;
   height: 32vh;
-  background-color: rgb(190, 57, 24, 0.3);
+}
+
+header,
+footer {
+  background-color: var(--HEADER-FOOTER-BGCOLOR-A);
 }
 
 nav {
@@ -56,13 +65,4 @@ ul {
 footer {
   bottom: 0;
   height: 8vh;
-  background-color: rgba(190, 57, 24, 0.3);
-}
-
-h1 {
-  color: rgb(119, 218, 21);
-}
-
-h3 {
-  color: rgb(190, 57, 24);
 }
