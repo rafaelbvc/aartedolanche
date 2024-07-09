@@ -4,28 +4,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
+  border: none;
 }
 
 /* :root {
 
 } */
 
+html {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 html,
 body {
   overflow-x: hidden;
-}
-
-html {
-  font-size: 1.5rem;
-  font-family: "Nunito", sans-serif;
-  text-align: center;
 }
 
 body {
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-  background-color: rgb(7, 7, 7);
+  background-color: rgba(7, 7, 7, 0.9);
 }
 
 header {
@@ -38,14 +40,23 @@ header {
   background-color: rgb(190, 57, 24);
 }
 
-footer {
-  bottom: 0;
-  height: 8vh;
-  background-color: rgb(190, 57, 24);
+nav {
+  height: 5vh;
+  position: relative;
 }
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  bottom: 0;
+  height: 8vh;
+  background-color: rgb(190, 57, 24);
 }
 
 h1 {

@@ -11,6 +11,10 @@
   padding: 0 2px;
 }
 
+.searchBTN {
+  float: right;
+}
+
 p {
   font-size: 0.7rem;
   font-weight: bolder;

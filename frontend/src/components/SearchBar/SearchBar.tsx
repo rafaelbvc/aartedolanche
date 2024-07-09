@@ -1,7 +1,6 @@
 import { SyntheticEvent } from "react";
 import styles from "./SearchBar.module.css";
 
-
 const handleSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
   e.preventDefault();
 };
@@ -15,7 +14,7 @@ const SearchBar = () => {
         type="text"
         placeholder="Digite aqui a arte que deseja degustar"
       />
-      <input type="submit" value="img" />
+      <input className={styles.searchBTN} type="submit" value="img" />
     </form>
   );
 };
