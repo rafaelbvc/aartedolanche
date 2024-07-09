@@ -5,3 +5,13 @@
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+
+.searchInput {
+  width: 100%;
+  padding: 0 2px;
+}
+
+p {
+  font-size: 0.7rem;
+  font-weight: bolder;
+}

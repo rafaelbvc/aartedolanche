@@ -1,7 +1,5 @@
 .menuNav {
-    
   height: 5vh;
-  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
