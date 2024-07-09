@@ -37,7 +37,7 @@ header {
   top: 0;
   z-index: 1;
   height: 32vh;
-  background-color: rgb(190, 57, 24);
+  background-color: rgb(190, 57, 24, 0.3);
 }
 
 nav {
@@ -56,7 +56,7 @@ ul {
 footer {
   bottom: 0;
   height: 8vh;
-  background-color: rgb(190, 57, 24);
+  background-color: rgba(190, 57, 24, 0.3);
 }
 
 h1 {
