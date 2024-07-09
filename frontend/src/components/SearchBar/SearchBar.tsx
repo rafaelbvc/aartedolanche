@@ -1,25 +1,29 @@
 import { SyntheticEvent } from "react";
 import styles from "./SearchBar.module.css";
 import SvgComponent from "../SvgComponent";
-import { svgs } from "../../assets/svgs/index";
+import { hamburguerAlpha, arrow } from "../../assets/svgs";
 
 const SearchBar = () => {
   const handleSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
 
-  const hamburguerAlpha = svgs;
-
   return (
     <form onSubmit={handleSubmit} className={styles.searchBar}>
-      <SvgComponent svgImage={hamburguerAlpha} svgWidth="1rem" />
+      <SvgComponent
+        svgImage={hamburguerAlpha}
+        svgWidth="1rem"
+        imgAlt="Logotipo hamburguer reduzido"
+      />
       {/* <p>BUSCA</p> */}
       <input
         className={styles.searchInput}
         type="text"
         placeholder="Digite aqui a arte que deseja degustar"
       />
-      <input className={styles.searchBTN} type="submit" value="img" />
+      <button className={styles.searchBTN}>
+        {/* <img src={arrow} width="1rem" alt="Botão com icone de lupa, para realizar a busca" /> */}
+      </button>
     </form>
   );
 };
