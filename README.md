@@ -27,7 +27,7 @@ Backlog:
 #Trocar o favicon.ico[x]
 #Criar componente de svg[x]
 #Criar Mock dos lanches[x]
-#Popular Mocks dos lanches[x]
+#Popular Mock dos lanches[x]
 #Criar container dos cards[]
 #Criar componente card[]
 #Criar responsividade breakpoint[screen && media  min360px][]
