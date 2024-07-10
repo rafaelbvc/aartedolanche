@@ -105,3 +105,16 @@ Comprimido – 2,76%
 | >=1024px | large |
 | >=1280px | xl |
 | >=1536px | 2xl |
+
+
+
+////////!SECTION
+mock de dados: card de item
+
+id
+photo
+name
+ingredients
+description
+price
+likes
