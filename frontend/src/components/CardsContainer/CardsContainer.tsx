@@ -9,7 +9,7 @@ const CardsContainer = () => {
       </section>
 
       <p>
-        Name<span>outracor</span>
+         <span>X - </span>Burguer <span>Caseiro</span>
       </p>
       <section>
         <p>description</p>
