@@ -17,7 +17,7 @@
   /* --BODY-BGCOLOR-B: whitesmoke; */
   --DETAILS-COLOR-A: rgba(119, 218, 21);
   /* --DETAILS-COLOR-B: rgba(119, 218, 21) */
-  --FONT-COLOR-TEXTS: antiquewhite
+  --FONT-COLOR-TEXTS: antiquewhite;
 }
 
 html {
@@ -26,36 +26,24 @@ html {
   text-align: center;
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-
 body {
   min-height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
   background-color: var(--BODY-BGCOLOR-B);
 }
 
 header {
-  position: sticky;
-  display: flex;
-  flex-flow: column nowrap;
   top: 0;
-  z-index: 1;
+  position: sticky;
   height: 32vh;
+  z-index: 100;
+  background-color: var(--BODY-BGCOLOR-B);
 }
 
-header,
-footer {
-  background-color: var(--HEADER-FOOTER-BGCOLOR-A);
-}
 
-nav {
+/* nav {
   height: 5vh;
   position: relative;
-}
+} */
 
 a {
   text-decoration: none;
@@ -68,4 +56,5 @@ ul {
 footer {
   bottom: 0;
   height: 8vh;
+  background-color: var(--HEADER-FOOTER-BGCOLOR-A);
 }
