@@ -1,23 +1,25 @@
 .searchBar {
-  top: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  top: 31vh;
+  position: relative;
+  z-index: 10;
 }
+
 
 .searchInput {
-  width: 100%;
-  padding: 0 2px;
-  border-radius: 0.14rem;
-  /* background-color: ; */
-}
-
-.searchBTN {
-  float: right;
+  width: 340px;
+  height: 1.2rem;
+  border-radius: 0.2rem;
+  background-color: var(--HEADER-FOOTER-BGCOLOR-B);
+  margin-top: 0.1rem;
+  box-shadow: 4px 4px 4px 1px rgba(22, 12, 10, 0.5);
+  color: var(--FONT-COLOR-TEXTS);
 }
 
 p {
   font-size: 0.7rem;
   font-weight: bolder;
+}
+
+.magnifyGlass {
+  cursor: pointer;
 }

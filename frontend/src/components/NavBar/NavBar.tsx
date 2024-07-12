@@ -4,7 +4,7 @@ import styles from "./NavBar.module.css";
 const NavBar = () => {
   return (
     <nav>
-      <NavLink to="/">
+      {/* <NavLink to="/">
         <span>Lanches</span>
       </NavLink>
       <NavLink to="/">
@@ -12,13 +12,13 @@ const NavBar = () => {
       </NavLink>
       <NavLink to="/">
         <span>Porções</span>
-      </NavLink>
-      <NavLink to="/">
+      </NavLink> */}
+      {/* <NavLink to="/">
         <span>Bebidas</span>
       </NavLink>
       <NavLink to="/">
         <span>Combos</span>
-      </NavLink>
+      </NavLink> */}
     </nav>
   );
 };

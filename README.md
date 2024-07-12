@@ -28,8 +28,10 @@ Backlog:
 #Criar componente de svg[x]
 #Criar Mock dos lanches[x]
 #Popular Mock dos lanches[x]
-#Criar container dos cards[]
-#Criar componente card[]
+#Criar container dos cards[x]
+#Criar componente card[x]
+#Criar o mock do banner[]
+#Finalizar layou da search[]
 #Criar responsividade breakpoint[screen && media  min360px][]
 
 
