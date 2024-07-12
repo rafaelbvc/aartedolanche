@@ -10,6 +10,7 @@
 
 :root {
   --HEADER-FOOTER-BGCOLOR-A: rgba(190, 57, 24, 0.5);
+  --HEADER-FOOTER-BGCOLOR-B: rgba(190, 57, 24, 0.3);
   /* --HEADER-FOOTER-BGCOLOR-B: #000; */
   --BODY-BGCOLOR-A: rgba(7, 7, 7, 1);
   --BODY-BGCOLOR-B: rgba(22, 12, 10, 0.9);

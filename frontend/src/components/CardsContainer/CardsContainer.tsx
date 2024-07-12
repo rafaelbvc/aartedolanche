@@ -5,10 +5,15 @@ const CardsContainer = () => {
   return (
     <div className={styles.cardsContainer}>
         <CardComponent />
-    <CardComponent />
-    <CardComponent />
-    <CardComponent />
-    <CardComponent /><CardComponent /><CardComponent /><CardComponent /><CardComponent /></div>
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+        <CardComponent />
+    </div>
   )
 }
 

@@ -1,7 +1,7 @@
 import { SyntheticEvent } from "react";
 import styles from "./SearchBar.module.css";
 import SvgComponent from "../SvgComponent";
-import { hamburguerAlpha, arrow } from "../../assets/svgs";
+import { hamburguerAlpha, arrow, magnifyGlass} from "../../assets/svgs";
 
 const SearchBar = () => {
   const handleSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
@@ -11,11 +11,11 @@ const SearchBar = () => {
   return (
     <form onSubmit={handleSubmit} className={styles.searchBar}>
       <SvgComponent
-        svgImage={hamburguerAlpha}
-        svgWidth="1rem"
-        imgAlt="Logotipo hamburguer reduzido"
+        classNameImg={styles.magnifyGlass}
+        svgImage={magnifyGlass}
+        svgWidth="0.65rem"
+        imgAlt="Magnify Glass Icon"
       />
-      {/* <p>BUSCA</p> */}
       <input
         className={styles.searchInput}
         type="text"
