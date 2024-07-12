@@ -28,7 +28,9 @@ html {
 
 body {
   min-height: 100vh;
+  max-width: 1440px;
   background-color: var(--BODY-BGCOLOR-B);
+  margin: 0 auto;
 }
 
 header {

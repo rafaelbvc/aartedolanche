@@ -13,7 +13,7 @@ const SearchBar = () => {
       <SvgComponent
         classNameImg={styles.magnifyGlass}
         svgImage={magnifyGlass}
-        svgWidth="0.65rem"
+        svgWidth="0.8rem"
         imgAlt="Magnify Glass Icon"
       />
       <input
