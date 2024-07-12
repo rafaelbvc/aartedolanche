@@ -2,7 +2,7 @@ import SvgComponent from "../SvgComponent";
 import styles from "./CardComponent.module.css";
 import burgerPhoto from "../../assets/burgers/burger-d.jpg"
 
-const CardsContainer = () => {
+const CardComponent = () => {
   return (
     <div className={styles.container}>
       <section>
@@ -38,4 +38,4 @@ const CardsContainer = () => {
   );
 };
 
-export default CardsContainer;
+export default CardComponent;
