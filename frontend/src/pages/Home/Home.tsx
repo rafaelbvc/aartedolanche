@@ -1,7 +1,6 @@
 import styles from "./Home.module.css";
 import HelmetComponent from "../../components/HelmetComponent";
-import CardsContainer from "../../components/CardsContainer/CardsContainer";
-
+import CardComponent from "../../components/CardComponent/CardComponent"
 const Home = () => {
   return (
     <div className={styles.home}>
@@ -12,7 +11,7 @@ const Home = () => {
       />
       {/* <h1>A Arte do Lanche</h1>
       <h3>...em fase inicial de construção...</h3> */}
-      <CardsContainer />
+      <CardComponent />
     </div>
   );
 };
