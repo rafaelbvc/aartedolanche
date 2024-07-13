@@ -41,6 +41,10 @@ header {
   background-color: var(--BODY-BGCOLOR-B);
 }
 
+hr {
+  height: 1px;
+  background: var(--BODY-BGCOLOR-B);
+}
 
 /* nav {
   height: 5vh;
@@ -55,8 +59,4 @@ ul {
   list-style: none;
 }
 
-footer {
-  bottom: 0;
-  height: 8vh;
-  background-color: var(--HEADER-FOOTER-BGCOLOR-A);
-}
+

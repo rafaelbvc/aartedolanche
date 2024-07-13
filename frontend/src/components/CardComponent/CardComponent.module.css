@@ -32,8 +32,6 @@ span, .pStuffs {
 
 hr {
 	margin: 0.2rem 0 0.2rem 0;
-	height: 1px; 
-	background: var(--BODY-BGCOLOR-B);
 }
 
 .divPhoto {
