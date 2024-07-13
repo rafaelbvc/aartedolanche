@@ -11,6 +11,7 @@ const Footer = () => {
       <p>contatos abrir o app</p>
       <hr />
       <p>Footer &copy;</p>
+      <p>Desenvolvedor RBVC Solucoes</p>
     </footer>
   );
 };
