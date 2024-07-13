@@ -1,18 +1,19 @@
 .searchBar {
-  top: 31vh;
+  /* top: 31.45vh; */
+  top: 29vh;
   position: relative;
   z-index: 10;
 }
 
-
 .searchInput {
   width: 340px;
   height: 1.2rem;
+  padding: 0 10px 0 25px;
   border-radius: 0.2rem;
   background-color: var(--HEADER-FOOTER-BGCOLOR-B);
-  margin-top: 0.1rem;
   box-shadow: 4px 4px 4px 1px rgba(22, 12, 10, 0.5);
   color: var(--FONT-COLOR-TEXTS);
+  text-align: center;
 }
 
 p {
@@ -21,5 +22,7 @@ p {
 }
 
 .magnifyGlass {
+  top: 0.4rem;
+  position: absolute;
   cursor: pointer;
 }
