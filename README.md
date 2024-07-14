@@ -33,7 +33,7 @@ Backlog:
 #Criar o mock do banner[]
 #Finalizar layou da search[x]
 #Medias do footer[x]
-#Adicionar conteúdo do footer[]
+#Adicionar conteúdo do footer[x]
 #Finalizar footer & responsividade do mesmo[]
 #Criar responsividade breakpoint[screen && media  min360px][]
 

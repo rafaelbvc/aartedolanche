@@ -1,6 +1,7 @@
 import SvgComponent from "../SvgComponent";
 import styles from "./CardComponent.module.css";
 import burgerPhoto from "../../assets/burgers/burger-d.jpg";
+import { hamburguerAlpha } from "../../assets/svgs";
 
 const CardComponent = () => {
   return (
@@ -24,7 +25,7 @@ const CardComponent = () => {
         <p className={styles.pDescription}>
           Pão de hambúrguer gourmet super macio sem gergilim, selado no
           tostador, blend de carnes de 90gr super suculenta com uma generosa
-          fatia de queijo a sua escolha ( Mussarela ou Polengui)
+          fatia de queijo a sua escolha (Mussarela ou Polengui)
         </p>
         <hr />
         <p className={styles.pStuffs}>
@@ -35,18 +36,57 @@ const CardComponent = () => {
         </p>
       </section>
       <hr />
+      <section>
+        <label className={styles.labelPrice}>
+          <p>Preço</p>
+          <p>
+            <span className={styles.spanPrice}>R$</span> 18,00
+          </p>
+        </label>
+      </section>
+      <hr />
       <section className={styles.sectionRate}>
-        {/* <button><SvgComponent svgImage="" imgAlt="botão de like" svgWidth="1rem"/></button> */}
         <label className={styles.labelHamburguer}>
+          {/* logica de botao de like */}
           <p>+</p> &nbsp;
-          <span>♥</span>
+          <span>
+            <SvgComponent
+              svgImage={hamburguerAlpha}
+              imgAlt="hamburguer"
+              svgWidth="0.92rem"
+            />
+          </span>
         </label>
         <div>
-          <span className={styles.alphaHeart}>♥</span> &nbsp;
-          <span className={styles.alphaHeart}>♥</span> &nbsp;
-          <span>♥</span> &nbsp;
-          <span>♥</span> &nbsp;
-          <span>♥</span>
+          <SvgComponent
+            svgImage={hamburguerAlpha}
+            imgAlt="hamburguer"
+            svgWidth="0.92rem"
+            classNameImg={styles.alphaHamburguer}
+          />
+          &nbsp;
+          <SvgComponent
+            svgImage={hamburguerAlpha}
+            imgAlt="hamburguer"
+            svgWidth="0.92rem"
+            classNameImg={styles.alphaHamburguer}
+          />
+          &nbsp;
+          <SvgComponent
+            svgImage={hamburguerAlpha}
+            imgAlt="hamburguer"
+            svgWidth="0.92rem"
+          />
+          <SvgComponent
+            svgImage={hamburguerAlpha}
+            imgAlt="hamburguer"
+            svgWidth="0.92rem"
+          />
+          <SvgComponent
+            svgImage={hamburguerAlpha}
+            imgAlt="hamburguer"
+            svgWidth="0.92rem"
+          />
         </div>
       </section>
     </div>
