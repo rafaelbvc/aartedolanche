@@ -21,9 +21,6 @@ const SearchBar = () => {
         type="text"
         placeholder="Digite aqui a arte que deseja degustar"
       />
-      <button className={styles.searchBTN}>
-        {/* <img src={arrow} width="1rem" alt="Botão com icone de lupa, para realizar a busca" /> */}
-      </button>
     </form>
   );
 };

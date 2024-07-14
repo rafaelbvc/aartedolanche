@@ -25,4 +25,5 @@ p {
   top: 0.4rem;
   position: absolute;
   cursor: pointer;
+  transform: translateX(20%);
 }

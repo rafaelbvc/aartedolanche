@@ -26,7 +26,7 @@ span,
   color: var(--FONT-COLOR-TEXTS);
 }
 
-.alphaHeart {
+.alphaHamburguer {
   opacity: 0.3;
 }
 
@@ -53,5 +53,17 @@ hr {
 .sectionRate {
   display: flex;
   justify-content: space-between;
-  margin: 0 10px 0 12px;
+  margin: 0 0 0 12px;
+}
+
+.labelPrice {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: right;
+}
+
+.spanPrice {
+  margin-left: 1rem;
+  font-size: 0.54rem;
 }
