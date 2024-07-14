@@ -1,7 +1,7 @@
 import { SyntheticEvent } from "react";
 import styles from "./SearchBar.module.css";
 import SvgComponent from "../SvgComponent";
-import { hamburguerAlpha, arrow, magnifyGlass} from "../../assets/svgs";
+import { hamburguerAlpha, arrow, magnifyGlass } from "../../assets/svgs";
 
 const SearchBar = () => {
   const handleSubmit = (e: SyntheticEvent<HTMLFormElement>) => {

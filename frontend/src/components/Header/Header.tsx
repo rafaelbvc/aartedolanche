@@ -6,7 +6,11 @@ import logoMain from "../../assets/pngs/logoMain.png";
 const Header = () => {
   return (
     <header className={styles.headerComponent}>
-      <img src={logoMain} alt="logo png background alpha" className={styles.logoMain} />
+      <img
+        src={logoMain}
+        alt="logo png background alpha"
+        className={styles.logoMain}
+      />
       <SearchBar />
 
       <NavBar />
