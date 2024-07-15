@@ -58,7 +58,6 @@ Tamanhos de resolução de tela móvel mais comuns em todo o mundo
 360×800 – 7,13%
 360×780 – 5,43%
 375×667 – 5,25%
-360×780 – 4,76%
 
 
 Tamanhos de resolução de tela de tablet mais comuns em todo o mundo
