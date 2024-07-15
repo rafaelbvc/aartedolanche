@@ -1,13 +1,3 @@
-/* .footerApp {
-  bottom: 0;
-  background-color: var(--HEADER-FOOTER-BGCOLOR-A);
-  border-radius: 0.1rem 0.1rem 0 0;
-  padding: 0.4rem 0.5rem;
-  color: var(--FONT-COLOR-TEXTS);
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
-} */
-
 footer > section {
   margin: 0 auto;
   max-width: 350px;
@@ -32,8 +22,36 @@ footer p {
   margin: 0;
 }
 
-/* .footer menu {
-  
-} */
+@media screen and (min-width: 600px) {
+  footer > section, .labelDeveloper {
+    max-width: 598px;
+  }
+
+  .sectionSocial,
+  .sectionMap {
+    width: 290px;
+  }
+
+  .mediaContactsLocalization {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .labelDeveloper{
+    max-width: 340px;
+    align-self: center;
+  }
+
+  /* .labelMap > p {
+    flex-wrap: wrap;
+    white-space: break-all;
+    word-break: break-all;
+    display: flex;
+
+  } */
+}
 
 /* hr hide when > XXXXX */
