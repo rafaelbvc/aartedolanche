@@ -13,7 +13,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className={styles.footerApp}>
+    <footer>
       <section>
         <p>
           Lanchonete Gourmet &nbsp; A <span>Arte</span> do Lanche
