@@ -3,6 +3,7 @@ import styles from "./CardsContainer.module.css";
 // import { burgersData } from "../../data/burgers/burgersData";
 import burgersData from "../../data/burgers/burgersData.json";
 import { Console } from "console";
+import { useEffect } from "react";
 
 const CardsContainer = () => {
   // const name = burgersData;
@@ -23,6 +24,17 @@ const CardsContainer = () => {
   //     pros.name;
   //   }),
   // );
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch("../../data/burgers/burgersData");
+      const burgerData = await data.json();
+
+      console.log(burgerData.data);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className={styles.cardsContainer}>
