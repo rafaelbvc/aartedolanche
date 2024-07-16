@@ -19,11 +19,12 @@ footer p {
 }
 
 .labelDeveloper {
-  margin: 0;
+  margin: auto;
 }
 
 @media screen and (min-width: 600px) {
-  footer > section, .labelDeveloper {
+  footer > section,
+  .labelDeveloper {
     max-width: 598px;
   }
 
@@ -40,18 +41,17 @@ footer p {
     justify-content: space-evenly;
   }
 
-  .labelDeveloper{
+  .labelDeveloper {
     max-width: 340px;
     align-self: center;
   }
+}
 
-  /* .labelMap > p {
-    flex-wrap: wrap;
-    white-space: break-all;
-    word-break: break-all;
-    display: flex;
 
-  } */
+@media screen and (min-width: 801px) {
+  .mediaContactsLocalization {
+    justify-content: center;
+  }
 }
 
 /* hr hide when > XXXXX */

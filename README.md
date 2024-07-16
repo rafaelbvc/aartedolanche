@@ -34,8 +34,9 @@ Backlog:
 #Finalizar layou da search[x]
 #Medias do footer[x]
 #Adicionar conteúdo do footer[x]
-#Finalizar footer & responsividade do mesmo[]
-#Criar responsividade breakpoint[screen && media  min360px][]
+#Finalizar footer & responsividade do mesmo[x]
+#Criar responsividade breakpoint[screen && media  min320px][x]
+#Criar parte funcional do componente de Card e typar[x]
 
 
 
