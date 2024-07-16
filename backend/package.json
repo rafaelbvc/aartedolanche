@@ -1,6 +1,6 @@
 {
   "name": "aartedolanchebackend",
-  "version": "1.0.0",
+  "version": "0.5.9",
   "author": "Rafael Vendramini",
   "description": "backend a arte do lanche",
   "main": "index.ts",
