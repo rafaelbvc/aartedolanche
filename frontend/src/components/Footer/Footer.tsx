@@ -15,31 +15,35 @@ const Footer = () => {
   return (
     <footer>
       <section>
-        <p>
+        <p style={{ fontSize: "0.54rem", textTransform: "uppercase" }}>
           Lanchonete Gourmet &nbsp; A <span>Arte</span> do Lanche
         </p>
         <p>&nbsp;</p>
       </section>
       {/* <p>topbtn absolute </p> */}
-      <section>
-        <p>SIGA-NOS</p>
-        <menu className={styles.contactsSocial}>
-          <SvgComponent svgImage={whatsapp} imgAlt="whatsapp icon" />
-          <SvgComponent svgImage={facebook} imgAlt="facebook icon" />
-          <SvgComponent svgImage={instagram} imgAlt="instagram icon" />
-          <SvgComponent svgImage={email} imgAlt="email icon" />
-          <SvgComponent svgImage={mobilePhone} imgAlt="mobilePhone icon" />
-          <SvgComponent svgImage={phone} imgAlt="phone icon" />
-        </menu>
-        <p>&nbsp;</p>
-      </section>
-      <section>
-        <label className={styles.labelMap}>
-          <p>Rua Coronel Fernando Prestes, n° 03 - Centro</p>
-          <SvgComponent svgImage={map} imgAlt="map icon" svgWidth="0.76rem" />
-        </label>
-        <p>&nbsp;</p>
-      </section>
+      <div className={styles.mediaContactsLocalization}>
+        <section className={styles.sectionSocial}>
+          <p>SIGA-NOS</p>
+          <menu className={styles.contactsSocial}>
+            <SvgComponent svgImage={whatsapp} imgAlt="whatsapp icon" />
+            <SvgComponent svgImage={facebook} imgAlt="facebook icon" />
+            <SvgComponent svgImage={instagram} imgAlt="instagram icon" />
+            <SvgComponent svgImage={email} imgAlt="email icon" />
+            <SvgComponent svgImage={mobilePhone} imgAlt="mobilePhone icon" />
+            <SvgComponent svgImage={phone} imgAlt="phone icon" />
+          </menu>
+          <p>&nbsp;</p>
+        </section>
+        <section className={styles.sectionMap}>
+          <label className={styles.labelMap}>
+            <p>
+              Rua Coronel Fernando Prestes, n° 03 - Centro
+            </p>
+            <SvgComponent svgImage={map} imgAlt="map icon" svgWidth="0.76rem" />
+          </label>
+          <p>&nbsp;</p>
+        </section>
+      </div>
       <section>
         <p>
           Copyright <span>&copy;</span> &nbsp; 2024 A Arte do Lanche Ltda.
@@ -48,7 +52,9 @@ const Footer = () => {
       </section>
       <section>
         <label className={styles.labelDeveloper}>
-          <p>Desenvolvido por RBVC Soluções Tecnológicas Ltda.</p>
+          <p style={{ fontSize: "0.46rem" }}>
+            Desenvolvido por RBVC Soluções Tecnológicas Ltda.
+          </p>
           <SvgComponent
             svgImage={whatsapp}
             imgAlt="whatsapp icon"

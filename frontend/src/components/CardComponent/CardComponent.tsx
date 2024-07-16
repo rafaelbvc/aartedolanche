@@ -3,7 +3,28 @@ import styles from "./CardComponent.module.css";
 import burgerPhoto from "../../assets/burgers/burger-d.jpg";
 import { hamburguerAlpha } from "../../assets/svgs";
 
-const CardComponent = () => {
+type tCardCardComponent = {
+  burgerPhoto: string;
+  burgerPhotoAlt: string;
+  burgerName: string;
+  burgerDescription: string;
+  burgerIngredients: string;
+  burguerPrice: string;
+  // somo todos os votos e divido por 5 number length  %  Math.floor()
+  burgerRate?: number;
+};
+
+const CardComponent = (props: tCardCardComponent) => {
+  const {
+    burgerPhoto,
+    burgerPhotoAlt,
+    burgerName,
+    burgerDescription,
+    burgerIngredients,
+    burguerPrice,
+    burgerRate,
+  } = props;
+
   return (
     <div className={styles.container}>
       <section>
@@ -11,28 +32,27 @@ const CardComponent = () => {
           <img
             className={styles.burgerPhoto}
             src={burgerPhoto}
-            alt="X-tananaa photo"
+            alt={burgerPhotoAlt}
           />
         </div>
       </section>
       <hr />
-
       <p>
-        <span>X - </span>BURGUER <span>CASEIRO</span>
+        {/* <span>X - </span>BURGUER <span>CASEIRO</span> */}
+        {burgerName}
       </p>
       <hr />
       <section>
         <p className={styles.pDescription}>
-          Pão de hambúrguer gourmet super macio sem gergilim, selado no
+          {/* Pão de hambúrguer gourmet super macio sem gergilim, selado no
           tostador, blend de carnes de 90gr super suculenta com uma generosa
-          fatia de queijo a sua escolha (Mussarela ou Polengui)
+          fatia de queijo a sua escolha (Mussarela ou Polengui) */}
+          {burgerDescription}
         </p>
         <hr />
         <p className={styles.pStuffs}>
-          ingredientes:{" "}
-          <span className={styles.spanStuffs}>
-            hambúrguer, hambúrguer, hambúrguer, hambúrguer ou hambúrguer
-          </span>
+          ingredientes:
+          <span className={styles.spanStuffs}>{burgerIngredients}</span>
         </p>
       </section>
       <hr />
@@ -40,7 +60,7 @@ const CardComponent = () => {
         <label className={styles.labelPrice}>
           <p>Preço</p>
           <p>
-            <span className={styles.spanPrice}>R$</span> 18,00
+            <span className={styles.spanPrice}>R$</span> {burguerPrice}
           </p>
         </label>
       </section>
