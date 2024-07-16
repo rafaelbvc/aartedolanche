@@ -18,10 +18,6 @@ async function main() {
     await client.close();
     console.log("conectadao");
   }
-
-  //   collections.forEach((collection) =>
-  //     console.log(collection.s.namespace.collection),
-  //   );
 }
 
 main();
