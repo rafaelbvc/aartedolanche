@@ -1,22 +1,21 @@
-import {Request, Response} from "express"
+import { Request, Response } from "express"
 import IburgersSchema from "../interfaces/IburgesSchema"
-import { Burgers } from "../models/burgersDataModel"
+const Burgers = require("../models/BurgersSchema")
 
-export const getAllBurgers = async(req: Request, res: Response) => {
 
-    let burgers: IburgersSchema
+
+const getAllBurgers = async(req: Request, res: Response) => {
 
     try { 
+       const burgers:IburgersSchema = await Burgers.find().select("-ids").lean()
+       res.status(201).json(burgers)
 
-       burgers = await Burgers.find().select("-ids").lean()
-
-    } catch(e: any) {
-        res.status(417).json({ message: "Upssss, something wrong..." }) 
-        return
+    } catch(error: any) {
+        res.status(417).json({ message: "Upssss, something wrong..." }).send(error)
+        
     } 
     finally { console.log("finnaly do getAllBurgers")}
 
-    
-    res.status(201).json({ message: "List of Hamburguers" })
-
 }
+
+module.exports = {getAllBurgers}

@@ -1,9 +1,8 @@
 
-//verificar lib types
-//@ts-ignore
-import mongoose, { Schema, model, Model, InferSchemaType } from "mongoose"
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 
-const BurgersDataModel = new Schema(
+const burgersSchema = new Schema(
     {
      ids: {type: Number, required: true, unique: true},
      photo: {type: String, required: true},
@@ -18,7 +17,6 @@ const BurgersDataModel = new Schema(
  }
 )
 
-export const Burgers: Model<InferSchemaType<typeof BurgersDataModel>> = model(
-    "Burgers",
-    BurgersDataModel
-)
+const Burgers = mongoose.model("Burgers", burgersSchema)
+
+module.exports = Burgers

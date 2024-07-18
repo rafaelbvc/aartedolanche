@@ -1,25 +1,20 @@
 import express from "express"
-import { Router, Request, Response  } from "express"
-import dotenv from "dotenv"
-dotenv.config()
-import {router} from "../src/routes/public/routes"
-// import  cors  from "cors"
+import { config } from "dotenv"
+import { MongoClient } from "./db/mongo"
 
+const Server = async() => {
+    config()
 
 const server = express()
 
-// const router = Router()
-
-const PORT = process.env.PORT || "5050"
-
 server.use(express.json())
 
-// server.use(cors())
+await MongoClient.connect()
 
-// route.get("/", (req: Request, res: Response)  => {
-//     res.json({message: "messsagewerrgfwerfgwgwrgf"})
-// })
+const port = process.env.PORT || 8002
 
-server.use(router)
+server.listen(port, () => console.log(`listening on port ${port}...`))
 
-server.listen(PORT, () => console.log(`Server is running on port ${PORT}`))
+}
+
+Server()
