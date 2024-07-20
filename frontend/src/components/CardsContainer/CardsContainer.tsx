@@ -1,41 +1,30 @@
-import CardComponent from "../CardComponent/CardComponent";
 import styles from "./CardsContainer.module.css";
-// import { burgersData } from "../../data/burgers/burgersData";
-import burgersData from "../../data/burgers/burgersData.json";
-import { Console } from "console";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+
+const url = "http://localhost:10808/hamburgers";
 
 const CardsContainer = () => {
-  // const name = burgersData;
-
-  // console.log(burgersData.ids);
-
-  // const arrayBurguer = burgersData.map((...props) =>
-  //   props.map((props) => props[0].ids)
-
-  // );
-
-  // console.log(arrayBurguer);
-
-  // const gggg = burgersData;
-
-  // console.log(
-  //   burgersData().map((pros) => {
-  //     pros.name;
-  //   }),
-  // );
+  const [burgerData, setBurgerData] = useState<any>(undefined);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetch("../../data/burgers/burgersData");
-      const burgerData = await data.json();
+    const fetchBurgerData = async () => {
+      try {
+        const data: any = await fetch(url, {
+          headers: { "Content-Type": "application/json" },
+        });
 
-      console.log(burgerData.data);
+        console.log(data.json(), "datajson");
+        const dataBurger = JSON.stringify(data);
+        console.log(dataBurger);
+        setBurgerData(dataBurger);
+      } catch (e) {
+        console.log(e, "error");
+      }
     };
-
-    fetchData();
+    fetchBurgerData();
   }, []);
 
+  console.log(burgerData, "burger data");
   return (
     <div className={styles.cardsContainer}>
       {/* <CardComponent burgerPhoto={photo}/>

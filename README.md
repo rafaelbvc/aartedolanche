@@ -42,12 +42,14 @@ Backlog:
 #Criar servidor express com dotenv, cors, mongoose [x]
 #Criar e  configurar env [x]
 #Criar conexão com o mongo [x]
-#Criar controller e funcional de post []
-#Criar rota get []
-#Cadastrar lanches no banco de dados []
-#Criar rota de post []
-
-
+#Criar controller e funcional de post [x]
+#Criar rota get [x]
+#Cadastrar lanches no banco de dados [x]
+#Criar rota de post [x]
+#Criar validações post [x]
+#Trazer informações do backend para o front end[x]
+#Renderizar informações no component card[]
+#Armazenar dados trazidos em um reducer[]
 
 
 -

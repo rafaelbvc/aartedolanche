@@ -1,4 +1,3 @@
-import styles from "./Home.module.css";
 import HelmetComponent from "../../components/HelmetComponent";
 import CardsContainer from "../../components/CardsContainer/CardsContainer";
 const Home = () => {
