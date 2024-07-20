@@ -1,9 +1,18 @@
-import express from "express"
+import express, {Request, Response} from "express"
+import dotenv from "dotenv"
+import routes from "./routes/Router"
+import mongoConnection from "./db/mongoConnection"
+dotenv.config()
 
-
-
+const port = process.env.PORT
 
 const server = express()
 
+server.use(express.json())
 
-server.listen(10600, () => console.log(`servidor up porta 10600`))
+mongoConnection()
+
+server.use(routes) 
+
+
+server.listen(port, () => console.log(`server is up on localhost:${port}`))

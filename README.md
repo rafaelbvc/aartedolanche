@@ -38,12 +38,12 @@ Backlog:
 #Criar responsividade breakpoint[screen && media  min320px][x]
 #Criar parte funcional do componente de Card e typar[x]
 #Criar servidor Mongodb com docker [x]
-#Criar projeto inicial do brackend com docker e typescript rotas (post e get) []
-#Criar servidor express com dotenv, cors, mongoose []
-#Criar e  configurar env []
-#Criar conexão com o mongo []
-#Criar rota get []
+#Criar projeto inicial do brackend com docker e typescript rotas (post e get) [x]
+#Criar servidor express com dotenv, cors, mongoose [x]
+#Criar e  configurar env [x]
+#Criar conexão com o mongo [x]
 #Criar controller e funcional de post []
+#Criar rota get []
 #Cadastrar lanches no banco de dados []
 #Criar rota de post []
 
@@ -58,5 +58,3 @@ Backlog:
 -
 
 ////////////////////////////////////////
-
-Backend -->
