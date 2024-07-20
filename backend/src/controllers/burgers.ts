@@ -32,6 +32,18 @@ const burgersPost = async(resquest: Request, response:Response) => {
 
     const { burgerName, burgerPhotoPath, burgerDescription, burgerIngredients, burgerPrice, burgerLikes } = resquest.body
 
+    if(!burgerName || !burgerPhotoPath || !burgerDescription || !burgerIngredients || !burgerPrice || !burgerLikes ){
+        response.status(400).json({message: "All the fields need to be filled in"})
+        return
+    }
+
+    const hasBurger = await Burgers.findOne({burgerName}) 
+    console.log(hasBurger)
+    if(hasBurger){
+        response.status(400).json({message: "The burger already registered"})
+        return
+    }
+
     try {
         const  burgerData = await Burgers.create({
             burgerName,
@@ -42,8 +54,8 @@ const burgersPost = async(resquest: Request, response:Response) => {
             burgerLikes
         })
 
-        response.status(201).send(console.log("Hamburger registered successfully!"))
-        response.json("Hamburger registered successfully!")
+        // response.status(201).send(console.log("Hamburger registered successfully!"))
+        response.status(201).json("Hamburger registered successfully!")
     }catch(error: any ){
         response.status(400).send(error.message)
         return

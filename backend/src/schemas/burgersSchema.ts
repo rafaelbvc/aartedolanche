@@ -6,6 +6,7 @@ const burgersSchema = new mongoose.Schema(
         burgerName: {
             type: String,
             require: true,
+            unique: true
         },
         burgerPhotoPath: {
             type:String,

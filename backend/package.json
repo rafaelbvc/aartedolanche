@@ -1,6 +1,6 @@
 {
   "name": "aartedolanchebackend",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "a arte do lanche backend",
   "main": "./src/server.ts",
   "scripts": {
