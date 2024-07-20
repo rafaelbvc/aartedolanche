@@ -8,9 +8,6 @@ if(!uri){
     uri = "0.0.0.0:0000"
 }
 
-
-
-
 const mongoConnection = async() => {
 
     try{

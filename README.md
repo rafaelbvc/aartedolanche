@@ -48,7 +48,7 @@ Backlog:
 #Criar rota de post [x]
 #Criar validações post [x]
 #Trazer informações do backend para o front end[x]
-#Renderizar informações no component card[]
+#Renderizar informações no component card[x]
 #Armazenar dados trazidos em um reducer[]
 
 
