@@ -1,24 +1,18 @@
-import express from "express"
-import { Router, Request, Response  } from "express"
+import express, {Request, Response} from "express"
 import dotenv from "dotenv"
+import routes from "./routes/Router"
+import mongoConnection from "./db/mongoConnection"
 dotenv.config()
-// import  cors  from "cors"
 
+const port = process.env.PORT
 
 const server = express()
 
-const route = Router()
-
-const PORT = process.env.PORT || "5050"
-
 server.use(express.json())
 
-// server.use(cors())
+mongoConnection()
 
-route.get("/", (req: Request, res: Response)  => {
-    res.json({message: "messsagewerrgfwerfgwgwrgf"})
-})
+server.use(routes) 
 
-server.use(route)
 
-server.listen(PORT, () => console.log(`Server is running on port ${PORT}`))
+server.listen(port, () => console.log(`server is up on localhost:${port}`))
