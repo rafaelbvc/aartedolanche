@@ -1,4 +1,5 @@
 import {Request, Response} from "express"
+import Burgers from "../schemas/burgersSchema"
 
 
 const burgersGetCommon = async(request: Request, response: Response) => {
@@ -10,11 +11,46 @@ const burgersGetCommon = async(request: Request, response: Response) => {
         response.status(500).send(console.log(error))
         return
     }
+}
+
+const burgersGetAll = async(request: Request, response: Response) => {
+
+    try {
+        const burgersData = await Burgers.find().lean()
+        response.status(200).json(burgersData)
+        response.send(console.log("Successful query!"))
+    }catch(error) {
+        response.status(400).json("Bad request!")
+        response.send(console.log("Bad request!"))
+        return
+    }
 
 
+}
+
+const burgersPost = async(resquest: Request, response:Response) => {
+
+    const { burgerName, burgerPhotoPath, burgerDescription, burgerIngredients, burgerPrice, burgerLikes } = resquest.body
+
+    try {
+        const  burgerData = await Burgers.create({
+            burgerName,
+            burgerPhotoPath,
+            burgerDescription,
+            burgerIngredients,
+            burgerPrice,
+            burgerLikes
+        })
+
+        response.status(201).send(console.log("Hamburger registered successfully!"))
+        response.json("Hamburger registered successfully!")
+    }catch(error: any ){
+        response.status(400).send(error.message)
+        return
+    }
 }
 
 
 
 
-export { burgersGetCommon }
+export { burgersGetCommon, burgersPost, burgersGetAll }
