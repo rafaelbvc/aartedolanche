@@ -39,6 +39,7 @@ const CardComponent = (props: tCardCardComponent) => {
       <hr />
       <p>
         {/* <span>X - </span>BURGUER <span>CASEIRO</span> */}
+        <span>X - </span>
         {burgerName}
       </p>
       <hr />
@@ -52,7 +53,7 @@ const CardComponent = (props: tCardCardComponent) => {
         <hr />
         <p className={styles.pStuffs}>
           ingredientes:
-          <span className={styles.spanStuffs}>{burgerIngredients}</span>
+          <span className={styles.spanStuffs}>&nbsp;{burgerIngredients}</span>
         </p>
       </section>
       <hr />
@@ -60,7 +61,10 @@ const CardComponent = (props: tCardCardComponent) => {
         <label className={styles.labelPrice}>
           <p>Preço</p>
           <p>
-            <span className={styles.spanPrice}>R$</span> {burguerPrice}
+            <span className={styles.spanPrice}>R$</span>{" "}
+            {Number.isInteger(burguerPrice)
+              ? `${burguerPrice},00`
+              : `${burguerPrice}0`}
           </p>
         </label>
       </section>

@@ -1,41 +1,38 @@
+import IBurgers from "../../interfaces/IBurgers";
+import CardComponent from "../CardComponent/CardComponent";
 import styles from "./CardsContainer.module.css";
 import { useState, useEffect } from "react";
+import * as photoPath from "../../assets/burgers/index";
 
 const url = "http://localhost:10808/hamburgers";
 
+/* <Promise<Array<IBurgers>>></Promise> */
+console.log(photoPath.burgerD);
+
 const CardsContainer = () => {
-  const [burgerData, setBurgerData] = useState<any>(undefined);
+  const [burgerData, setBurgerData] = useState([]);
 
   useEffect(() => {
-    const fetchBurgerData = async () => {
-      try {
-        const data: any = await fetch(url, {
-          headers: { "Content-Type": "application/json" },
-        });
+    fetch(url)
+      .then((response) => response.json())
+      .then((result) => setBurgerData(result));
+  }, [setBurgerData]);
 
-        console.log(data.json(), "datajson");
-        const dataBurger = JSON.stringify(data);
-        console.log(dataBurger);
-        setBurgerData(dataBurger);
-      } catch (e) {
-        console.log(e, "error");
-      }
-    };
-    fetchBurgerData();
-  }, []);
-
-  console.log(burgerData, "burger data");
   return (
     <div className={styles.cardsContainer}>
-      {/* <CardComponent burgerPhoto={photo}/>
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent />
-      <CardComponent /> */}
+      {burgerData &&
+        burgerData.map((data: IBurgers) => (
+          <CardComponent
+            key={data.burgerName}
+            burgerDescription={data.burgerDescription}
+            burgerIngredients={data.burgerIngredients}
+            burgerRate={0}
+            burgerPhoto={data.burgerPhotoPath}
+            burguerPrice={data.burgerPrice}
+            burgerPhotoAlt={""}
+            burgerName={data.burgerName}
+          />
+        ))}
     </div>
   );
 };
