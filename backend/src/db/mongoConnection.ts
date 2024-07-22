@@ -21,4 +21,4 @@ const mongoConnection = async() => {
 }
 
 
-export default mongoConnection 
+export default mongoConnection

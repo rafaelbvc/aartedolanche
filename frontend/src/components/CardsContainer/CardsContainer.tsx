@@ -2,12 +2,12 @@ import IBurgers from "../../interfaces/IBurgers";
 import CardComponent from "../CardComponent/CardComponent";
 import styles from "./CardsContainer.module.css";
 import { useState, useEffect } from "react";
-// import * as photoPath from "../../assets/burgers/index";
+import * as photoPath from "../../assets/burgers/index";
 
 const url = "http://localhost:10808/hamburgers";
 
 /* <Promise<Array<IBurgers>>></Promise> */
-// console.log(photoPath.burgerD);
+console.log(photoPath.burgerD);
 
 const CardsContainer = () => {
   const [burgerData, setBurgerData] = useState([]);

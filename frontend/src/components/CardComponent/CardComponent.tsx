@@ -64,7 +64,7 @@ const CardComponent = (props: tCardCardComponent) => {
             <span className={styles.spanPrice}>R$</span>{" "}
             {Number.isInteger(burguerPrice)
               ? `${burguerPrice},00`
-              : burguerPrice}
+              : `${burguerPrice}0`}
           </p>
         </label>
       </section>
