@@ -14,9 +14,7 @@ const mongoConnection = async() => {
         await mongoose.connect(uri)
         console.log("Mongo is connected successfully!")
     }catch(error){
-        throw new Error
         console.error(error, { message: "Can't reach the request"})
-        return
     }
 }
 

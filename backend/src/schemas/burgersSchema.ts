@@ -1,5 +1,6 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 import IBurgers from "../interfaces/IBurgers";
+import Images from "./imagesSchema";
 
 const burgersSchema = new mongoose.Schema(
     {
@@ -8,10 +9,7 @@ const burgersSchema = new mongoose.Schema(
             require: true,
             unique: true
         },
-        burgerPhotoPath: {
-            type:String,
-            require: true,
-        },
+        burgerPhotoPath: [ { type: Schema.Types.ObjectId, ref: Images } ],
         burgerDescription: {
             type: String,
             require: true,

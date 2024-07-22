@@ -1,6 +1,8 @@
+import { ObjectId } from "mongoose";
+
 export default interface IBurgers {
     burgerName: string,
-    burgerPhotoPath: string,
+    burgerPhotoPath: ObjectId,
     burgerDescription: string,
     burgerIngredients: string,
     burgerPrice: number,
