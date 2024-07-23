@@ -9,7 +9,7 @@ const storageDestination = (
   file: Express.Multer.File,
   callback: DestinationCallback,
 ) => {
-  callback(null, "../../../uploads/images");
+  callback(null, "../uploads/images");
 };
 
 const fileNameDestination = (
