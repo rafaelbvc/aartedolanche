@@ -1,21 +1,23 @@
-import express, {Request, Response} from "express"
-import dotenv from "dotenv"
-import routes from "./routes/Router"
-import mongoConnection from "./db/mongoConnection"
-import cors from "cors"
-dotenv.config()
+import express from "express";
+import dotenv from "dotenv";
+import routes from "./routes/Router";
+import mongoConnection from "./db/mongoConnection";
+import cors from "cors";
+import multer from "multer";
+dotenv.config();
 
-const port = process.env.PORT
+const port = process.env.PORT;
 
-const server = express()
+const server = express();
 
-server.use(cors({origin: '*'}))
+server.use(cors({ origin: "*" }));
 
-server.use(express.json())
+server.use(express.json());
 
-mongoConnection()
+mongoConnection();
 
-server.use(routes) 
+server.use(multer);
 
+server.use(routes);
 
-server.listen(port, () => console.log(`server is up on localhost:${port}`))
+server.listen(port, () => console.log(`server is up on localhost:${port}`));

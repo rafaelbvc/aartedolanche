@@ -1,31 +1,35 @@
 import mongoose, { Schema } from "mongoose";
 import IImages from "../interfaces/IImages";
 
-
-const imagesSchema = new mongoose.Schema ({
-
+const imagesSchema = new mongoose.Schema(
+  {
     productName: {
-        type: String,
-        require: true,
-        unique: true
+      type: String,
+      require: true,
+      unique: true,
     },
     path: {
-        type: String,
-        require: true
+      type: String,
+      require: true,
     },
     altText: {
-        type: String,
-        require: true
+      type: String,
+      require: true,
     },
     category: {
-        type: String,
-        require: true,
-    }
-},
-{
-    timestamps: true
-})
+      type: String,
+      require: true,
+    },
+    image: {
+      data: Buffer,
+      contentType: String  
+  }
+  },
+  {
+    timestamps: true,
+  },
+);
 
-const Images = mongoose.model<IImages>("Images", imagesSchema)
+const Images = mongoose.model<IImages>("Images", imagesSchema);
 
-export default Images
+export default Images;

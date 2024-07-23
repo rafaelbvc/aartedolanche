@@ -1,15 +1,16 @@
-import Router, {Request, Response} from "express"
-import { burgersGetAll, burgersGetCommon, burgersPost } from "../controllers/burgers"
+import Router, { Request, Response } from "express";
+import {
+  burgersGetAll,
+  burgersGetCommon,
+  burgersPost,
+} from "../controllers/burgersController";
 
+const routes = Router();
 
-const routes = Router()
+routes.get("/", burgersGetCommon);
 
+routes.get("/hamburgers", burgersGetAll);
 
-routes.get("/", burgersGetCommon)
+routes.post("/hamburgerregister", burgersPost);
 
-routes.get("/hamburgers", burgersGetAll)
-
-routes.post("/hamburgerregister", burgersPost)
-
-
-export default routes
+export default routes;
