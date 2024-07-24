@@ -19,7 +19,7 @@ const fileNameDestination = (
 ) => {
   const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
   const extensioFile = file.originalname.slice(file.originalname.lastIndexOf("."))
-  callback(null, `${file.fieldname}${uniqueSuffix}${extensioFile}`);
+  callback(null, file.fieldname + "-" + uniqueSuffix + "-" + extensioFile);
 };
 
 const storage = multer.diskStorage({
