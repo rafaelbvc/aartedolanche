@@ -1,14 +1,6 @@
 import { Request, Response } from "express";
 import Burgers from "../schemas/burgersSchema";
 
-const burgersGetCommon = async (request: Request, response: Response) => {
-  try {
-    await response.status(200).send("Connected Successfully");
-  } catch (error) {
-    response.status(500).send(console.log(error));
-    return;
-  }
-};
 
 const burgersGetAll = async (request: Request, response: Response) => {
   try {
@@ -67,4 +59,4 @@ const burgersPost = async (resquest: Request, response: Response) => {
   }
 };
 
-export { burgersGetCommon, burgersPost, burgersGetAll };
+export { burgersPost, burgersGetAll };

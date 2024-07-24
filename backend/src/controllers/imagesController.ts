@@ -9,10 +9,10 @@ const imagesGetAll = async(request: Request , response:Response, Next: NextFunct
 
     if(!imagesData) {
         console.error("Error imagesGetAll")
-        return Next(response.status(400).json({message: "Operation not complete"}))
+        return response.status(400).json({message: "Operation not complete"})
     }
     console.log("Success imagesGetAll")
-    response.status(200).send("Success!")
+    response.status(200).json(imagesData)
 
 }
 
@@ -22,25 +22,24 @@ const imagesPostUnique = async(request: Request, response: Response, Next: NextF
 
     const {  productName, path, altText, category, image  } = request.body
 
-    if( !productName || !path || !altText || !category || !image){
-        console.error("Error imagesUnique")
-        return
-        // return response.status(400).json({message: "Operation not complete!"})
-    }
-       
-    await imagesSchema.create({
+    const file = request.file
+
+    // if( !productName || !path || !altText || !category || !image){
+    //     console.error("Error imagesUnique")
+    //     return
+    //     // return response.status(400).json({message: "Operation not complete!"})
+    // }
+       //path: file.path
+    const createImage = await imagesSchema.create({
         productName,
         path,
         altText,
         category,
-        image: {
-            data: fs.readFileSync(path.join(__dirname + '/uploads/images/' + request.file?.filename)),
-            contentType: ['image/png', 'image/jpg', 'image/svg', 'image/ico']
-        }
+        image: file
     })
     
-    console.log("Sucess imagesPostUnique")
-    response.status(201).send("Success!")
+    console.log("Success imagesPostUnique")
+    response.status(201).json(createImage)
 
 }
 

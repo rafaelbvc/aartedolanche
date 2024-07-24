@@ -9,7 +9,7 @@ const storageDestination = (
   file: Express.Multer.File,
   callback: DestinationCallback,
 ) => {
-  callback(null, "../uploads/images");
+  callback(null, "/aartedolanche/aartedolanche/backend/src/uploads/images");
 };
 
 const fileNameDestination = (
@@ -21,11 +21,11 @@ const fileNameDestination = (
   callback(null, file.fieldname + "-" + uniqueSuffix);
 };
 
-const multerStorage = multer.diskStorage({
+const storage = multer.diskStorage({
   destination: storageDestination,
   filename: fileNameDestination,
 });
 
-const uploadImages = multer({ storage: multerStorage });
+const uploadImages = multer({ storage });
 
 export default uploadImages;

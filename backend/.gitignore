@@ -2,3 +2,4 @@ node_modules
 package-locked.json
 dist
 .env
+/src/uploads

@@ -18,8 +18,7 @@ const imagesSchema = new mongoose.Schema(
     },
     category: {
       type: String,
-      enum: ["COMBOS", "HAMBURGERS", "DRINKS"],
-      default: "HAMBURGERS"
+      require: true
     },
     image: {
       data: Buffer,
