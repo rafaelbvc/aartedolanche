@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import Burgers from "../schemas/burgersSchema";
+import imagesSchema from "../schemas/imagesSchema";
 
 
 const burgersGetAll = async (request: Request, response: Response) => {
@@ -15,19 +16,19 @@ const burgersGetAll = async (request: Request, response: Response) => {
 const burgersPost = async (resquest: Request, response: Response) => {
   const {
     burgerName,
-    burgerPhotoPath,
     burgerDescription,
     burgerIngredients,
     burgerPrice,
     burgerLikes,
   } = resquest.body;
 
+
+
   if (
     !burgerName ||
-    !burgerPhotoPath ||
     !burgerDescription ||
     !burgerIngredients ||
-    !burgerPrice ||
+    !burgerPrice||
     !burgerLikes
   ) {
     response
@@ -43,14 +44,18 @@ const burgersPost = async (resquest: Request, response: Response) => {
     return;
   }
 
+  const imagesGet = await imagesSchema.find().lean()
+
+  console.log(imagesGet)
+
   try {
     await Burgers.create({
       burgerName,
-      burgerPhotoPath,
       burgerDescription,
       burgerIngredients,
       burgerPrice,
       burgerLikes,
+      images: imagesGet
     });
     response.status(201).json("Hamburger registered successfully!");
   } catch (error: any) {

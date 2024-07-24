@@ -5,6 +5,6 @@ export default interface IBurgers {
   burgerPhotoPath: ObjectId;
   burgerDescription: string;
   burgerIngredients: string;
-  burgerPrice: number;
-  burgerLikes: number;
+  burgerPrice: Number;
+  burgerLikes: Number;
 }
