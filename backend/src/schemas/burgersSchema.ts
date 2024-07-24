@@ -9,12 +9,6 @@ const burgersSchema = new mongoose.Schema(
       require: true,
       unique: true,
     },
-    burgerPhotoPath: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: Images,
-      },
-    ],
     burgerDescription: {
       type: String,
       require: true,
@@ -31,6 +25,11 @@ const burgersSchema = new mongoose.Schema(
       type: Number,
       require: true,
     },
+    images: 
+   [ {
+      type: Schema.Types.Array,
+      ref: Images
+    }]
   },
   {
     timestamps: true,

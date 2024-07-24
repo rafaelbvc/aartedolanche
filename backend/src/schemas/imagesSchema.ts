@@ -18,7 +18,7 @@ const imagesSchema = new mongoose.Schema(
     },
     category: {
       type: String,
-      require: true,
+      require: true
     },
     image: {
       data: Buffer,
@@ -29,6 +29,7 @@ const imagesSchema = new mongoose.Schema(
     timestamps: true,
   },
 );
+
 
 const Images = mongoose.model<IImages>("Images", imagesSchema);
 

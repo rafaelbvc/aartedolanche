@@ -1,16 +1,47 @@
 import { NextFunction, Request, Response } from "express"
-import multerStorage from "../config/multerStorage"
+import imagesSchema from "../schemas/imagesSchema"
+import fs from  "fs"
 
 
-const upload = multerStorage
+const imagesGetAll = async(request: Request , response:Response, Next: NextFunction) => {
 
+    const imagesData = await imagesSchema.find({}).lean()
 
-const imagesUnique = async(request: Request, response: Response, Next: NextFunction) => {
-
-    
-
+    if(!imagesData) {
+        console.error("Error imagesGetAll")
+        return response.status(400).json({message: "Operation not complete"})
+    }
+    console.log("Success imagesGetAll")
+    response.status(200).json(imagesData)
 
 }
 
 
-export { imagesUnique }
+
+const imagesPostUnique = async(request: Request, response: Response, Next: NextFunction) => {
+
+    const {  productName, path, altText, category, image  } = request.body
+
+    const file = request.file
+
+    // if( !productName || !path || !altText || !category || !image){
+    //     console.error("Error imagesUnique")
+    //     return
+    //     // return response.status(400).json({message: "Operation not complete!"})
+    // }
+       //path: file.path
+    const createImage = await imagesSchema.create({
+        productName,
+        path,
+        altText,
+        category,
+        image: file
+    })
+    
+    console.log("Success imagesPostUnique")
+    response.status(201).json(createImage)
+
+}
+
+
+export { imagesPostUnique, imagesGetAll }
