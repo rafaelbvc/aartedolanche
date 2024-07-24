@@ -18,6 +18,7 @@ const imagesSchema = new mongoose.Schema(
     },
     category: {
       type: String,
+      enum: [ "Hamburger", "Combo", "FrenchFries"  ],
       require: true
     },
     image: {

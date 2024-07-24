@@ -24,15 +24,15 @@ const imagesPostUnique = async(request: Request, response: Response, Next: NextF
 
     const file = request.file
 
-    // if( !productName || !path || !altText || !category || !image){
-    //     console.error("Error imagesUnique")
-    //     return
-    //     // return response.status(400).json({message: "Operation not complete!"})
-    // }
-       //path: file.path
+    //  if( !productName || !path || !altText || !category || !image){
+    //      console.error("Error imagesUnique")
+    //      return
+    //      // return response.status(400).json({message: "Operation not complete!"})
+    //  }
+   
     const createImage = await imagesSchema.create({
         productName,
-        path,
+        path: file?.path,
         altText,
         category,
         image: file
