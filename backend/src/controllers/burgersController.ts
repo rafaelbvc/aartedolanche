@@ -23,7 +23,6 @@ const burgersPost = async (resquest: Request, response: Response) => {
   } = resquest.body;
 
 
-
   if (
     !burgerName ||
     !burgerDescription ||
@@ -46,7 +45,7 @@ const burgersPost = async (resquest: Request, response: Response) => {
 
   const imagesGet = await imagesSchema.find().lean()
 
-  console.log(imagesGet)
+
 
   try {
     await Burgers.create({
