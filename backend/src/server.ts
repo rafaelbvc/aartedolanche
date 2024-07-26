@@ -2,10 +2,10 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoConnection from "./db/mongoConnection";
 import cors from "cors";
-import multer from "multer";
 import path from "path"
-import burgerRouter from "./routes/burgersRouter";
+import burgersRouter from "./routes/burgersRouter";
 import imagesRouter from "./routes/imagesRouter";
+import { burgersByName } from "./controllers/burgersController";
 dotenv.config();
 
 const port = process.env.PORT;
@@ -18,9 +18,8 @@ server.use(express.json());
 
 mongoConnection();
 
-// server.use(multer);
 
-server.use("/hamburgers",burgerRouter);
+server.use("/hamburgers",burgersRouter);
 server.use("/images",imagesRouter);
 
 server.use("./uploads/images", express.static(path.join(__dirname, ".." , "uploads")))

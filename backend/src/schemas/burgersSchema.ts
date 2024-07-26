@@ -25,11 +25,6 @@ const burgersSchema = new mongoose.Schema(
       type: Number,
       require: true,
     },
-    images: 
-   [ {
-      type: Schema.Types.Array,
-      ref: Images
-    }]
   },
   {
     timestamps: true,

@@ -1,17 +1,19 @@
-import Router, { Request, Response } from "express";
+import Router from "express";
 import {
   burgersGetAll,
   burgersPost,
+  burgersByName
 } from "../controllers/burgersController";
 
 
 
-const burgerRouter = Router();
+const burgersRouter = Router();
 
 
-burgerRouter.get("/", burgersGetAll);
-burgerRouter.post("/hamburgerregister", burgersPost);
+burgersRouter.get("/", burgersGetAll).post("/hamburgerregister", burgersPost).get('/:burgerName', burgersByName);
+// burgersRouter;
+// burgersRouter
 
 
 
-export default burgerRouter
+export default burgersRouter

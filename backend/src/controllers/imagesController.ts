@@ -43,5 +43,7 @@ const imagesPostUnique = async(request: Request, response: Response, Next: NextF
 
 }
 
+// query com nome do mesmo hamburger e imagem 
+
 
 export { imagesPostUnique, imagesGetAll }
