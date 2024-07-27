@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import Burgers from "../schemas/burgersSchema";
+import imagesSchema from "../schemas/imagesSchema";
 
 
 const burgersGetAll = async (request: Request, response: Response) => {
@@ -15,19 +16,18 @@ const burgersGetAll = async (request: Request, response: Response) => {
 const burgersPost = async (resquest: Request, response: Response) => {
   const {
     burgerName,
-    burgerPhotoPath,
     burgerDescription,
     burgerIngredients,
     burgerPrice,
     burgerLikes,
   } = resquest.body;
 
+
   if (
     !burgerName ||
-    !burgerPhotoPath ||
     !burgerDescription ||
     !burgerIngredients ||
-    !burgerPrice ||
+    !burgerPrice||
     !burgerLikes
   ) {
     response
@@ -43,14 +43,18 @@ const burgersPost = async (resquest: Request, response: Response) => {
     return;
   }
 
+  const imagesGet = await imagesSchema.find().lean()
+
+
+
   try {
     await Burgers.create({
       burgerName,
-      burgerPhotoPath,
       burgerDescription,
       burgerIngredients,
       burgerPrice,
       burgerLikes,
+      images: imagesGet
     });
     response.status(201).json("Hamburger registered successfully!");
   } catch (error: any) {
@@ -59,4 +63,26 @@ const burgersPost = async (resquest: Request, response: Response) => {
   }
 };
 
-export { burgersPost, burgersGetAll };
+
+//query param do base hamburgers pelo nome do hamburger 
+//trazer como response o hamburger
+
+const burgersByName = async( request: Request, response: Response ) => {
+
+
+  const { burgerName } =  request.params
+
+
+  const burgerNameByParam = await Burgers.findOne({burgerName: burgerName})
+
+   if(!burgerNameByParam){
+     response.status(404).json({message: "Hamburguer não cadastrado"})
+     return
+   }
+
+  response.status(200).json({burgerNameByParam})
+
+}
+
+
+export { burgersPost, burgersGetAll, burgersByName };

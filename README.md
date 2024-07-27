@@ -50,8 +50,12 @@ Backlog:
 #Trazer informações do backend para o front end[x]
 #Renderizar informações no component card[x]
 #Criar Schema images e relacionar com Schema burgers[x]
-#Reformular controller dos mesmos[]
-#Criar servidor de imagens no backend multer & fs[]
+#Reformular controller dos mesmos[x]
+#Criar servidor de imagens no backend multer [x]
+#Criar query por param hamburger [x]
+#Criar query por param imagem []
+#Criar component de inserção de imagens []
+#Popular com dados reais []
 #Armazenar dados trazidos em um reducer[]
 
 
