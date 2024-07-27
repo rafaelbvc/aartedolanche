@@ -10,10 +10,12 @@ import {
 const burgersRouter = Router();
 
 
-burgersRouter.get("/", burgersGetAll).post("/hamburgerregister", burgersPost).get('/:burgerName', burgersByName);
-// burgersRouter;
-// burgersRouter
+burgersRouter.get("/", burgersGetAll)
+             .post("/hamburgerregister", burgersPost)
+             .get('/:burgerName', burgersByName);
+
 
 
 
 export default burgersRouter
+ 

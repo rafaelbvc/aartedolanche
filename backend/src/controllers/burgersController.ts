@@ -70,23 +70,15 @@ const burgersPost = async (resquest: Request, response: Response) => {
 const burgersByName = async( request: Request, response: Response ) => {
 
 
-  const burgerNameParam =  request.params.burgerName
-
-  const burgerFilter = request.body.burgerName
-
-  const id = request.body._id
+  const { burgerName } =  request.params
 
 
-  console.log(burgerNameParam, "param")
+  const burgerNameByParam = await Burgers.findOne({burgerName: burgerName})
 
-  const burgerNameByParam = await Burgers.findById("66a1e163668989fc774a7eb1")
-  // .$where(() => {burgerFilter === burgerNameByParam})
-  console.log(burgerNameByParam, "byparam")
-
-  if(!burgerNameByParam){
-    response.status(404).json({message: "Hamburguer não cadastrado"})
-    return
-  }
+   if(!burgerNameByParam){
+     response.status(404).json({message: "Hamburguer não cadastrado"})
+     return
+   }
 
   response.status(200).json({burgerNameByParam})
 

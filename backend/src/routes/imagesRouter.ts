@@ -7,7 +7,7 @@ const imagesRouter = Router();
 
 
 imagesRouter.get("/", imagesGetAll)
+            .post("/postimage", uploadImages.single("image")  ,imagesPostUnique)
 
-imagesRouter.post("/postimage", uploadImages.single("image")  ,imagesPostUnique)
 
 export default imagesRouter

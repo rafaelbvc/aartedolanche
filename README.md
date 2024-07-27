@@ -52,7 +52,7 @@ Backlog:
 #Criar Schema images e relacionar com Schema burgers[x]
 #Reformular controller dos mesmos[x]
 #Criar servidor de imagens no backend multer [x]
-#Criar query por param hamburger []
+#Criar query por param hamburger [x]
 #Criar query por param imagem []
 #Criar component de inserção de imagens []
 #Popular com dados reais []
