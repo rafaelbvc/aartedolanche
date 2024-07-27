@@ -1,11 +1,10 @@
 import SvgComponent from "../SvgComponent";
 import styles from "./CardComponent.module.css";
-import burgerPhoto from "../../assets/burgers/burger-d.jpg";
 import { hamburguerAlpha } from "../../assets/svgs";
 
 type tCardCardComponent = {
-  burgerPhoto: string;
-  burgerPhotoAlt: string;
+  imagePath: string;
+  imageAlt: string;
   burgerName: string;
   burgerDescription: string;
   burgerIngredients: string;
@@ -16,8 +15,8 @@ type tCardCardComponent = {
 
 const CardComponent = (props: tCardCardComponent) => {
   const {
-    burgerPhoto,
-    burgerPhotoAlt,
+    imagePath,
+    imageAlt,
     burgerName,
     burgerDescription,
     burgerIngredients,
@@ -29,11 +28,7 @@ const CardComponent = (props: tCardCardComponent) => {
     <div className={styles.container}>
       <section>
         <div className={styles.divPhoto}>
-          <img
-            className={styles.burgerPhoto}
-            src={burgerPhoto}
-            alt={burgerPhotoAlt}
-          />
+          <img className={styles.burgerPhoto} src={imagePath} alt={imageAlt} />
         </div>
       </section>
       <hr />

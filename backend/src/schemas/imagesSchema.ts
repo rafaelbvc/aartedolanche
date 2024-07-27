@@ -18,19 +18,18 @@ const imagesSchema = new mongoose.Schema(
     },
     category: {
       type: String,
-      enum: [ "Hamburger", "Combo", "FrenchFries"  ],
-      require: true
+      enum: ["Hamburger", "Combo", "FrenchFries"],
+      require: true,
     },
     image: {
       data: Buffer,
-      contentType: String  
-  }
+      contentType: String,
+    },
   },
   {
     timestamps: true,
   },
 );
-
 
 const Images = mongoose.model<IImages>("Images", imagesSchema);
 

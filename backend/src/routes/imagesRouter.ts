@@ -1,13 +1,16 @@
 import Router from "express";
 import uploadImages from "../config/multerStorage";
-import { imagesGetAll, imagesPostUnique } from "../controllers/imagesController";
-
+import {
+  imagesByProductName,
+  imagesGetAll,
+  imagesPostUnique,
+} from "../controllers/imagesController";
 
 const imagesRouter = Router();
 
+imagesRouter
+  .get("/", imagesGetAll)
+  .post("/postimage", uploadImages.single("image"), imagesPostUnique)
+  .get("/:productName", imagesByProductName);
 
-imagesRouter.get("/", imagesGetAll)
-            .post("/postimage", uploadImages.single("image")  ,imagesPostUnique)
-
-
-export default imagesRouter
+export default imagesRouter;

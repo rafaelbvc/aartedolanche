@@ -27,9 +27,9 @@ const CardsContainer = () => {
             burgerDescription={data.burgerDescription}
             burgerIngredients={data.burgerIngredients}
             burgerRate={0}
-            burgerPhoto={data.burgerPhotoPath}
+            imagePath={data.burgerPhotoPath}
             burguerPrice={data.burgerPrice}
-            burgerPhotoAlt={""}
+            imageAlt={""}
             burgerName={data.burgerName}
           />
         ))}

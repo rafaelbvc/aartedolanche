@@ -18,7 +18,9 @@ const fileNameDestination = (
   callback: FileNameCallback,
 ) => {
   const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-  const extensioFile = file.originalname.slice(file.originalname.lastIndexOf("."))
+  const extensioFile = file.originalname.slice(
+    file.originalname.lastIndexOf("."),
+  );
   callback(null, file.fieldname + "-" + uniqueSuffix + extensioFile);
 };
 

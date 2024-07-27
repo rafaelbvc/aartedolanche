@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import Burgers from "../schemas/burgersSchema";
 import imagesSchema from "../schemas/imagesSchema";
+import Images from "../schemas/imagesSchema";
 
 
 const burgersGetAll = async (request: Request, response: Response) => {
@@ -61,11 +62,9 @@ const burgersPost = async (resquest: Request, response: Response) => {
     response.status(400).send(error.message);
     return;
   }
-};
+}
 
 
-//query param do base hamburgers pelo nome do hamburger 
-//trazer como response o hamburger
 
 const burgersByName = async( request: Request, response: Response ) => {
 
@@ -76,7 +75,7 @@ const burgersByName = async( request: Request, response: Response ) => {
   const burgerNameByParam = await Burgers.findOne({burgerName: burgerName})
 
    if(!burgerNameByParam){
-     response.status(404).json({message: "Hamburguer não cadastrado"})
+     response.status(404).json({message: "Hamburger não cadastrado"})
      return
    }
 
@@ -84,5 +83,38 @@ const burgersByName = async( request: Request, response: Response ) => {
 
 }
 
+const burgerAndImageByName = async(request: Request, response: Response) => {
 
-export { burgersPost, burgersGetAll, burgersByName };
+  const { burgerName } = request.params
+
+  const burgerAndImage = await Burgers.findOne({ burgerName: burgerName })
+  const imageAndBurger = await Images.findOne({productName: burgerName})
+
+  if(!burgerAndImage || !imageAndBurger){
+    response.status(404).json({message: "Hamburger e/ou Imagem não cadastrados"})
+    return
+  }
+
+  const burgerWithImage =  {  
+    burgerName: burgerAndImage.burgerName, 
+    burgerDescription: burgerAndImage.burgerDescription, 
+    burgerIngredients: burgerAndImage.burgerIngredients, 
+    burgerPrice: burgerAndImage.burgerPrice, 
+    burgerLikes: burgerAndImage.burgerLikes, 
+    imagePath: imageAndBurger.path, 
+    imageAlt: imageAndBurger.altText  }
+
+
+  if(burgerAndImage && imageAndBurger){
+    response.status(200).json(burgerWithImage)
+  }
+
+}
+
+
+
+
+
+
+
+export { burgersPost, burgersGetAll, burgersByName, burgerAndImageByName };
