@@ -1,8 +1,9 @@
 export default interface IBurgers {
   burgerName: string;
-  burgerPhotoPath: string;
+  burgerImagePath: string;
+  burgerAltImageText: string;
   burgerDescription: string;
   burgerIngredients: string;
-  burgerPrice: string;
-  burgerLikes: string;
+  burgerPrice: number;
+  burgerLikes: number;
 }

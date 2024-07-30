@@ -21,6 +21,9 @@ const imagesSchema = new mongoose.Schema(
       enum: ["Hamburger", "Combo", "FrenchFries"],
       require: true,
     },
+    imageName: {
+      type: String
+    },
     image: {
       data: Buffer,
       contentType: String,

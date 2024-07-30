@@ -23,13 +23,11 @@ const burgersPost = async (resquest: Request, response: Response) => {
     burgerLikes,
   } = resquest.body;
 
-
   if (
     !burgerName ||
     !burgerDescription ||
     !burgerIngredients ||
-    !burgerPrice||
-    !burgerLikes
+    !burgerPrice
   ) {
     response
       .status(400)
@@ -44,9 +42,12 @@ const burgersPost = async (resquest: Request, response: Response) => {
     return;
   }
 
-  const imagesGet = await imagesSchema.find().lean()
+  const imagesGet = await imagesSchema.findOne({productName: burgerName})
 
-
+  if(!imagesGet){
+    response.status(404).json({message: "The image from hamburger can't be found"})
+    return
+  }
 
   try {
     await Burgers.create({
@@ -55,7 +56,8 @@ const burgersPost = async (resquest: Request, response: Response) => {
       burgerIngredients,
       burgerPrice,
       burgerLikes,
-      images: imagesGet
+      burgerImagePath: imagesGet?.path,
+      burgerAltImageText: burgerName
     });
     response.status(201).json("Hamburger registered successfully!");
   } catch (error: any) {

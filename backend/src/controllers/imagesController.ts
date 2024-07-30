@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { request, Request, Response } from "express";
 import imagesSchema from "../schemas/imagesSchema";
 import Images from "../schemas/imagesSchema";
 
@@ -14,7 +14,7 @@ const imagesGetAll = async (request: Request, response: Response) => {
 };
 
 const imagesPostUnique = async (request: Request, response: Response) => {
-  const { productName, path, altText, category, image } = request.body;
+  const { productName, path, altText, category, imageName, image } = request.body;
 
   const file = request.file;
 
@@ -29,6 +29,7 @@ const imagesPostUnique = async (request: Request, response: Response) => {
     path: file?.path,
     altText,
     category,
+    imageName: file?.filename,
     image: file,
   });
 
@@ -49,5 +50,14 @@ const imagesByProductName = async (request: Request, response: Response) => {
 
   response.status(200).json({ imageByProductName });
 };
+
+const imageFileByParam = async(request: Request, response: Response) => {
+
+  const { imageNameParam } = request.params
+
+  const imageFile = await Images.findOne({ imageName: imageNameParam })
+
+
+}
 
 export { imagesPostUnique, imagesGetAll, imagesByProductName };

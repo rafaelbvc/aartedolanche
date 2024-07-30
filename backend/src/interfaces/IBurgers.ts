@@ -6,4 +6,6 @@ export default interface IBurgers {
   burgerIngredients: string;
   burgerPrice: Number;
   burgerLikes: Number;
+  burgerImagePath: String;
+  burgerAltImageText: String;
 }

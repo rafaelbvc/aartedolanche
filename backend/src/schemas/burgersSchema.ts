@@ -1,6 +1,5 @@
 import mongoose, { Schema } from "mongoose";
 import IBurgers from "../interfaces/IBurgers";
-import Images from "./imagesSchema";
 
 const burgersSchema = new mongoose.Schema(
   {
@@ -25,6 +24,12 @@ const burgersSchema = new mongoose.Schema(
       type: Number,
       require: true,
     },
+    burgerImagePath: {
+      type: String
+    },
+    burgerAltImageText: {
+      type: String
+    }
   },
   {
     timestamps: true,

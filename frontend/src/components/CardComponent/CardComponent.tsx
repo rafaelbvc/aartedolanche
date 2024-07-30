@@ -1,26 +1,27 @@
 import SvgComponent from "../SvgComponent";
 import styles from "./CardComponent.module.css";
 import { hamburguerAlpha } from "../../assets/svgs";
+// import img from "../../../../backend/src/uploads/images/image-1721884388928-17541860.png";
 
 type tCardCardComponent = {
-  imagePath: string;
-  imageAlt: string;
+  burgerImagePath: string;
+  burgerAltImageText: string;
   burgerName: string;
   burgerDescription: string;
   burgerIngredients: string;
-  burguerPrice: string;
+  burgerPrice: number;
   // somo todos os votos e divido por 5 number length  %  Math.floor()
   burgerRate?: number;
 };
 
 const CardComponent = (props: tCardCardComponent) => {
   const {
-    imagePath,
-    imageAlt,
+    burgerImagePath,
+    burgerAltImageText,
     burgerName,
     burgerDescription,
     burgerIngredients,
-    burguerPrice,
+    burgerPrice,
     burgerRate,
   } = props;
 
@@ -28,7 +29,11 @@ const CardComponent = (props: tCardCardComponent) => {
     <div className={styles.container}>
       <section>
         <div className={styles.divPhoto}>
-          <img className={styles.burgerPhoto} src={imagePath} alt={imageAlt} />
+          <img
+            className={styles.burgerPhoto}
+            src={"http://localhost:10808/image-1721884448442-731564312.png"}
+            alt={burgerAltImageText}
+          />
         </div>
       </section>
       <hr />
@@ -57,9 +62,9 @@ const CardComponent = (props: tCardCardComponent) => {
           <p>Preço</p>
           <p>
             <span className={styles.spanPrice}>R$</span>{" "}
-            {Number.isInteger(burguerPrice)
-              ? `${burguerPrice},00`
-              : `${burguerPrice}0`}
+            {Number.isInteger(burgerPrice)
+              ? `${burgerPrice},00`
+              : `${burgerPrice}0`}
           </p>
         </label>
       </section>
