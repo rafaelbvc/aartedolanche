@@ -23,7 +23,7 @@ mongoConnection();
 server.use("/hamburgers", burgersRouter);
 server.use("/images", imagesRouter);
 // server.use(`/${uriPathComposer}`, rootRouter)
-// server.use("/teste/:productName", uriPathComposer)
+server.use("/teste/:productName", uriPathComposer)
 
 server.use(
   "./uploads/images",
